@@ -53,4 +53,22 @@ export function kopplaLaggTill(
     vidLaggTill: (id: number) => void
 ): void {
     // TODO
+    container.addEventListener('click', (handelse) => {
+        // Om det inte är ett html-element, gör ingenting
+        if (!(handelse.target instanceof HTMLElement)) {
+            return
+        }
+        // Hämtar knappen som vi klickade på
+        const knapp = handelse.target.closest<HTMLButtonElement>(
+            'button.lagg-i-order'
+        )
+        // Om knapp inte finns
+        if (!knapp) {
+            return
+        }
+
+        // Callback
+        // Gör om string till number
+        vidLaggTill(Number(knapp.dataset.id))
+    })
 }
