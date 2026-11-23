@@ -145,3 +145,8 @@ form.addEventListener('submit', (handelse) => {
     // Töm formuläret
     form.reset()
 })
+
+// STEG 9: När jag testade med VoiceOver hör jag att rösten läser upp
+// de felmeddelanden som visas när ett fält innehåller ett fel.
+// Till exempel: "Namnet måste vara minst 2 tecken."
+// och: "Ange en giltig e-postadress, till exempel namn@exempel.se."
